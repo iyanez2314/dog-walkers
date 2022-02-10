@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class dogWalker extends Model {}
+class owner extends Model {}
 
-dogWalker.init(
+owner.init (
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,24 +15,25 @@ dogWalker.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len:[1]
+                len: [1]
             }
         },
-        dogs_walked: {
+        dog_owned: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'dogs',
+                model: 'dog',
                 key: 'id'
             }
         }
+
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'dog_walker'
+        modelName: 'owner'
     }
 )
 
-module.exports = dogWalker;
+module.exports = owner;
