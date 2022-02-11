@@ -17,13 +17,6 @@ dogWalker.init(
             validate: {
                 len:[1]
             }
-        },
-        dogs_walked: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'dogs',
-                key: 'id'
-            }
         }
     },
     {

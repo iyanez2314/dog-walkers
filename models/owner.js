@@ -17,15 +17,7 @@ owner.init (
             validate: {
                 len: [1]
             }
-        },
-        dog_owned: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'dog',
-                key: 'id'
-            }
         }
-
     },
     {
         sequelize,
