@@ -42,7 +42,8 @@ router.get('/:id', (req, res) => {
 // * Post dogs 
 router.post('/', (req, res) => {
     dogs.create({
-        name: req.body.name
+        name: req.body.name,
+        owner_id: req.body.owner_id
     })
     .then(dbDogData => res.json(dbDogData))
     .catch(err => {
