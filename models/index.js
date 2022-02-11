@@ -16,3 +16,5 @@ dogs.belongsTo(owner, {
 owner.hasMany(dogs, {
     foreignKey: 'dog_id'
 });
+
+module.exports = { dogs, owner, dogWalker }
