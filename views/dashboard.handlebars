@@ -1,0 +1,49 @@
+<!--<section>
+  <h2>Add New Walker</h2>
+
+  <form class="new-walker-form">
+    <div>
+      <label for="walker-name">Name</label>
+      <input type="text" id="walker-name" name="walker-name" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+-->
+
+
+{{#if dogs.length}}
+<section>
+  <h2>Dog Walkers</h2>
+  <table>
+  <!-- ... -->
+  <thead>
+    <tr>
+      <th>Dog Name</th>
+      <th>Dog ID</th>
+      <th>Owner Name</th>
+      <th>Owner ID</th>
+      <th>Walker ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each owner as owner}}
+    {{#each dogs as dog}}
+      <!-- Use a white background for odd rows, and slate-100 for even rows -->
+      <tr class="odd:bg-white even:bg-slate-100">
+        <td>{{dog.name}}</td>
+        <td>{{dog.id}}</td>
+        <td>{{owner.name}}</td>
+        <td>{{dog.owner_id}}</td>
+        <td>{{dog.dogwalker_id}}</td>
+      </tr>
+    {{/each}}
+    {{/each}}
+  </tbody>
+</table>
+
+{{/if}}
+
+
+<script src="/javascript/add-walker.js"></script>
+
