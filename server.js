@@ -15,7 +15,11 @@ app.get("/", function (req, res) {
   res.json("dog Walkers");
 });
 
-app.get("/results", () => {});
+app.get("/", function (req, res) {
+  // `res.sendFile` is Express' way of sending a file
+  // `__dirname` is a variable that always returns the directory that your server is running in
+  res.sendFile(__dirname, "index.html");
+});
 
 // sync sequelize models to db
 sequelize.sync().then(() => {
