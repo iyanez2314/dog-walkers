@@ -33,14 +33,11 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "postcss": "^8.4.6",
-<<<<<<< HEAD
     "sequelize": "^6.16.0"
   },
   "devDependencies": {
-=======
     "postcss-cli": "^9.1.0",
     "sequelize": "^6.16.0",
->>>>>>> origin/develop
     "tailwindcss": "^3.0.22"
   }
 }
