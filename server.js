@@ -4,6 +4,7 @@ const sequelize = require("./config/connection");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
+const tailwindcss = require("./tailwind.config");
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
