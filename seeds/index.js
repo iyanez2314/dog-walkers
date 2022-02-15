@@ -1,4 +1,4 @@
-const seedDogWalker = require("./dog-walker-seeds");
+const seedDogWalker = require("./dogWalker-seeds");
 const seedOwner = require("./owner-seeds");
 const seedDog = require("./dog-seeds");
 
