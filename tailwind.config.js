@@ -1,7 +1,7 @@
 module.exports = {
-  content: ["./views/*.handlebars"],  
-  theme: {    
-      extend: {},  
-  },  
+  content: ['views/layouts/main.handlebars'],
+  theme: {
+    extend: {},
+  },
   plugins: [],
 }
