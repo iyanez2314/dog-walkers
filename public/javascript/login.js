@@ -24,15 +24,16 @@ async function loginFormHandler(event) {
   
   async function signupFormHandler(event) {
     event.preventDefault();
-  
+    
+    const name = document.querySelector('#name').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   
-    if (email && password) {
+    if (email && password && name) {
       const response = await fetch('/api/dog-walker', {
         method: 'post',
         body: JSON.stringify({
-          username,
+          name,
           email,
           password
         }),
