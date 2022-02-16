@@ -10,7 +10,7 @@ dogs.findAll({
     // where: {
     //     id: req.session.id
     // },
-    attributes: ['id', 'name'],
+    attributes: ['id', 'name', 'dogwalker_id'],
     include: [
         {
             model: dogWalker,
@@ -24,7 +24,7 @@ dogs.findAll({
 })
 .then(dbDogWalkerData => {
     const dogs = dbDogWalkerData.map(dog => dog.get({ plain: true }));
-    
+    // res.json(dbDogWalkerData)
     res.render('dashboard', {dogs, loggedIn: true });
     })
     .catch(err => {

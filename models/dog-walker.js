@@ -56,7 +56,7 @@ dogWalker.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'dog_walker'
+        modelName: 'dogWalker'
     }
 );
 
