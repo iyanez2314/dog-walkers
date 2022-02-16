@@ -1,5 +1,5 @@
 const withAuth = (req, res, next) => {
-    if (!req.session.dogwalker_id) {
+    if (!req.session.dogWalker_id) {
       res.redirect('/login');
     } else {
       next();
