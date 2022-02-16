@@ -36,13 +36,23 @@ router.get('/:id', (req, res)=> {
 // * CREATE A NEW DOG WALKER
 router.post('/', (req, res) => {
     dogWalker.create({
-        name: req.body.name
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
     })
-    .then(dbDogWalkerData => res.json(dbDogWalkerData))
+    .then(dbDogWalkerData => {
+      req.session.save(() => {
+        req.session.dogWalker_id = dbDogWalkerData.id;
+        req.session.name = dbDogWalkerData.name;
+        req.session.loggedIn = true;
+
+        res.json(dbDogWalkerData)
+      })
+    })
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 router.post('/login', (req, res) => {
@@ -65,7 +75,8 @@ router.post('/login', (req, res) => {
       }
   
       req.session.save(() => {
-        req.session.user_id = dbDogWalkerData.id;
+        req.session.dogWalker_id = dbDogWalkerData.id;
+        req.session.name = dbDogWalkerData.name;
         req.session.loggedIn = true;
     
         res.json({ user: dbDogWalkerData, message: 'You are now logged in!' });

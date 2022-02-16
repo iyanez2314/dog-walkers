@@ -13,8 +13,18 @@ dogs.belongsTo(owner, {
     foreignKey: 'owner_id'
 });
 
-// dogWalker.hasMany(dogs, {
-//     foreignKey: 'owner_id'
-// });
+dogWalker.hasMany(dogs, {
+    foreignKey: 'dogwalker_id'
+});
+
+dogs.belongsTo(dogWalker, {
+    foreignKey: 'dogwalker_id'
+});
+
+// owner.belongsTo(dogWalker, {
+//     foreignKey: 'id'
+// })
+
+
 
 module.exports = {dogs , owner, dogWalker};

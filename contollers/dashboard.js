@@ -6,23 +6,15 @@ const withAuth = require('../utils/auth');
 
 // * Dog walker will be able to see all the dogs with their associated owner
 router.get('/', withAuth, (req, res) => {
-dogWalker.findAll({
-    where: {
-        id: req.session.id
-    },
+dogs.findAll({
+    // where: {
+    //     id: req.session.id
+    // },
     attributes: ['id', 'name'],
     include: [
         {
-            model: dogs,
-            attributes: ['id', 'name', 'owner_id', 'dogwalker_id'],
-            include: {
-                model: owner,
-                attributes: ['id']
-            }
-        },
-        {
-            model: dogs,
-            attributes: ['id', 'name']
+            model: dogWalker,
+            attributes: ['id']
         },
         {
             model: owner,
@@ -31,7 +23,8 @@ dogWalker.findAll({
     ]
 })
 .then(dbDogWalkerData => {
-    const dogs = dbDogWalkerData.map(dogs => dogs.get({ plain: true }));
+    const dogs = dbDogWalkerData.map(dog => dog.get({ plain: true }));
+    
     res.render('dashboard', {dogs, loggedIn: true });
     })
     .catch(err => {
