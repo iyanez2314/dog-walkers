@@ -6,7 +6,7 @@ const owner = require("./owner");
 // * All the relations will go here
 
 owner.hasMany(dogs, {
-  foreignKey: "dog_id",
+  foreignKey: "owner_id",
 });
 
 dogs.belongsTo(owner, {
@@ -14,11 +14,15 @@ dogs.belongsTo(owner, {
 });
 
 dogWalker.hasMany(dogs, {
-  foreignKey: "dogWalker_id",
+  foreignKey: "dogwalker_id",
 });
 
-// dogs.belongsto(dogWalker, {
-//   foreignKey: "dogWalker_id",
-// });
+dogs.belongsTo(dogWalker, {
+  foreignKey: "dogwalker_id",
+});
+
+// owner.belongsTo(dogWalker, {
+//     foreignKey: 'id'
+// })
 
 module.exports = { dogs, owner, dogWalker };

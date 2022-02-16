@@ -1,9 +1,8 @@
 
-{{#if posts.loggedIn}}
 <section>
   <h2>Dog Walkers</h2>
   <table>
-  <!-- ... -->
+
   <thead>
     <tr>
       <th>Dog Name</th>
@@ -14,11 +13,10 @@
   </thead>
   <tbody>
     {{#each dogs as |dog|}}
-      <!-- Use a white background for odd rows, and slate-100 for even rows -->
       <tr class="odd:bg-white even:bg-slate-100">
         <td>{{dog.name}}</td>
         <td>{{dog.id}}</td>
-        <td>{{dog.owner_id}}</td>
+        <td>{{dog.owner.id}}</td>
         <td>{{dog.dogwalker_id}}</td>
       </tr>
     {{/each}}
@@ -27,7 +25,5 @@
 </section>
 
 
-{{/if}}
 
-
-<script src="/javascript/add-walker.js"></script>
+{{!-- <script src="/javascript/add-walker.js"></script> --}}

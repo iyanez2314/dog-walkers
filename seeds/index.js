@@ -1,6 +1,6 @@
 const seedDogWalker = require("./dog-walker-seeds");
 const seedOwner = require("./owner-seeds");
-const seedDog = require("./dog-seeds");
+const seedDog = require("./dog-seed");
 
 const sequelize = require("../config/connection");
 
