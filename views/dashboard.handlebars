@@ -1,14 +1,16 @@
 
 
-<div class="auto">
 <div class="container is-fluid">
-  <div class="columns is-mobile">
-    <div class="column is-half is-offset-one-quarter">
+<div class="mx-auto">
+  {{!<div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">}}
       <section class="section"></section>
-
-      <table class="table is-bordered is-striped is-hoverable">
-        <thead>
-          <tr>
+        <div class="m-auto">
+          <h3 class="is-size-4 has-text-light m-auto">Please Select an available dog to walk</h3>
+        </div>
+      <table class="table is-bordered is-hoverable has-background-info-light mx-auto">
+        <thead class="has-background-info">
+          <tr class="has-text-light">
             <th>Dog Name</th>
             <th>Dog ID</th>
             <th>Owner ID</th>
@@ -18,7 +20,7 @@
         <tbody>
           {{#each dogs as |dog|}}
             <tr>
-              <td>{{dog.name}}</td>
+              <td><button class="button is-success" type="submit">{{dog.name}}</button></td>
               <td>{{dog.id}}</td>
               <td>{{dog.owner.id}}</td>
               <td>{{dog.dogwalker_id}}</td>
@@ -26,8 +28,8 @@
           {{/each}}
         </tbody>
       </table>
-    </div>
-  </div>
+  {{!  </div>
+  </div>}}
 </div>
 </div>
 

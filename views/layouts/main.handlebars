@@ -14,8 +14,8 @@
       <nav class="navbar is-dark is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <figure class="image is-48x48">
-              <img src="/public/assets/paw-logo.png">
+            <figure class="image is-32x32">
+              <img class="is-rounded" src="/assets/paw-logo.png">
             </figure>
           </a>
 
@@ -28,16 +28,16 @@
 
         <div id="navbarmobile" class="navbar-menu">
           <div class="navbar-start">
-            <a href="/" class="navbar-item">
+            <a href="/" class="navbar-item button is-link mx-4">
               Home
             </a>
-
             {{#if loggedIn}}
-            <a href="dashboard/" class="navbar-item">
+            <hr class="navbar-divider">
+            <a href="/dashboard" class="navbar-item button is-info">
               Dashboard
             </a>
             {{/if}}
-
+    
 
           <div class="navbar-end">
             <div class="navbar-item">
