@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn build:css && node server.js",
+    "start": "node server.js",
     "build:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "repository": {
@@ -15,7 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "private": true,
   "bugs": {
     "url": "https://github.com/iyanez2314/dog-walkers/issues"
   },
@@ -33,6 +32,7 @@
     "mysql2": "^2.3.3",
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
+    "pug": "^3.0.2",
     "sequelize": "^6.16.0",
     "yarn": "^1.22.17"
   },

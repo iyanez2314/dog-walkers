@@ -1,31 +1,33 @@
-<section>
-  <h2>Go Walk a Dog</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
-
-{{#if posts.length}}
+{{#if posts.loggedIn}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+  <h2>Dog Walkers</h2>
+  <table>
+  <!-- ... -->
+  <thead>
+    <tr>
+      <th>Dog Name</th>
+      <th>Dog ID</th>
+      <th>Owner ID</th>
+      <th>Walker ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each dogs as |dog|}}
+      <!-- Use a white background for odd rows, and slate-100 for even rows -->
+      <tr class="odd:bg-white even:bg-slate-100">
+        <td>{{dog.name}}</td>
+        <td>{{dog.id}}</td>
+        <td>{{dog.owner_id}}</td>
+        <td>{{dog.dogwalker_id}}</td>
+      </tr>
     {{/each}}
-  </ol>
+  </tbody>
+</table>
 </section>
+
+
 {{/if}}
 
-<script src=""></script>
+
+<script src="/javascript/add-walker.js"></script>

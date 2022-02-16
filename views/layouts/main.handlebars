@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Walkers</title>
-  <link rel="stylesheet" href="/public/stylesheets/style.css">
-  <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Dog Walkers</title>
 </head>
+<body class="text-gray-700">
+    <div>
+        <h1 class="text-2xl font-bold">
+            Dog Walkers
+        </h1>
 
-<body>
-  <div>
-    <header>
-      <h1>
-        <a href="/">Dog Walkers</a>
-        
-      </h1>
-      {{!-- <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard" class="bg-sky-600 hover:bg-sky-700">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav> --}}
-      
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-    </footer>
-  </div>
-  
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+        <h4 class="py-1">
+            Welcome!
+        </h4>
+    
+        <main>
+        {{{ body }}}
+        </main>
+
+        <footer>
+        Hello fellow dog walker
+        </footer>
+
+
+    </div>
 </body>
-
-
-
-
-
-
-
+</html>
 
 
 
