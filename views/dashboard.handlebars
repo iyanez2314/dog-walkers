@@ -1,33 +1,35 @@
 
 
+<div class="auto">
+<div class="container is-fluid">
+  <div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">
+      <section class="section"></section>
 
-
-<section>
-  <h2>Dog Walkers</h2>
-  <table>
-
-  <thead>
-    <tr>
-      <th>Dog Name</th>
-      <th>Dog ID</th>
-      <th>Owner ID</th>
-      <th>Walker ID</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each dogs as |dog|}}
-      <tr class="odd:bg-white even:bg-slate-100">
-        <td>{{dog.name}}</td>
-        <td>{{dog.id}}</td>
-        <td>{{dog.owner.id}}</td>
-        <td>{{dog.dogwalker_id}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
-</section>
-
-
+      <table class="table is-bordered is-striped is-hoverable">
+        <thead>
+          <tr>
+            <th>Dog Name</th>
+            <th>Dog ID</th>
+            <th>Owner ID</th>
+            <th>Walker ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each dogs as |dog|}}
+            <tr>
+              <td>{{dog.name}}</td>
+              <td>{{dog.id}}</td>
+              <td>{{dog.owner.id}}</td>
+              <td>{{dog.dogwalker_id}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
 
 {{!-- <script src="/javascript/add-walker.js"></script> --}}
 

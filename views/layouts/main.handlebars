@@ -1,33 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-background-dark">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dog Walkers</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
-<body>
-  <div class="wrapper">
+<body class="has-background-dark">
+  <div>
     <header>
-      <h1>
-        <a href="/">Dog Walkers</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard" class="bg-sky-600 hover:bg-sky-700">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+      <nav class="navbar is-dark is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <figure class="image is-48x48">
+              <img src="/public/assets/paw-logo.png">
+            </figure>
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarmobile">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarmobile" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="/" class="navbar-item">
+              Home
+            </a>
+
+            {{#if loggedIn}}
+            <a href="dashboard/" class="navbar-item">
+              Dashboard
+            </a>
+            {{/if}}
+
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                {{#if loggedIn}}
+                <a id="logout" class="button is-light">
+                  <strong>Logout</strong>
+                </a>
+                {{else}}
+                <a href="/login" class="button is-primary">
+                  <strong>Login</strong>
+                </a>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
-    <footer>
-    </footer>
   </div>
   
   {{#if loggedIn}}
@@ -40,3 +72,12 @@
 
 
 
+
+{{!--<nav>
+        {{#if loggedIn}}
+        <a href="/dashboard" class="bg-sky-600 hover:bg-sky-700">dashboard</a>
+        <button id="logout" class="button is-primary">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>--}}
