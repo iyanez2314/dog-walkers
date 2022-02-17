@@ -1,0 +1,66 @@
+     {{#each this}}
+      <div id="modal-js" class="modal">
+        <div class="modal-background">
+            <figure class="image">
+                <img src="/assets/dog-background.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+        <div class="modal-card">
+            <header class="modal-card-head has-background-dark">
+                <p class="modal-card-title has-text-light has-text-centered is-4">
+                    Booking Form
+                </p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body has-background-dark">
+            <div class="level is-mobile">
+                <h4 class="is-4 has-text-light level-item has-text-centered">Enter your info to book {{walker.name}}</h4>
+            </div>
+            <section>
+                <form class="booking-form">
+                    <div class="container is-fluid">
+                        <section class="section is medium">
+                            <div class="field">
+                                <p class="control has-icons-left">
+                                <input class="input" type="name" placeholder="What's your Name?" id="name">
+                                <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                                </span>
+                                </p>
+                            </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" placeholder="Email" id="email-booking">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                        </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="What's your dogs name?" id="dog-name">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                        </span>
+                        </p>
+                    </div>
+                    
+                </div>
+                </form>
+            </section>
+            </section>
+            <footer class="modal-card-foot">
+            <button type="submit" class="button is-success">Submit Booking {{walker.name}}!</button>
+            <button class="button">Cancel</button>
+            </footer>
+        </div>
+        </div>
+{{/each}}
+
+
+
+<script src="https://kit.fontawesome.com/6f76cc71c8.js" crossorigin="anonymous"></script>
+<script src="/javascript/booking.js"></script>
