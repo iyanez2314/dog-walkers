@@ -5,8 +5,8 @@
   {{!<div class="columns is-mobile">
     <div class="column is-half is-offset-one-quarter">}}
       <section class="section"></section>
-        <div class="m-auto">
-          <h3 class="is-size-4 has-text-light m-auto">Please Select an available dog to walk</h3>
+        <div class="level is-mobile">
+          <h3 class="is-size-2 has-text-light level-item has-text-centered">Dogs Being Walked</h3>
         </div>
       <table class="table is-bordered is-hoverable has-background-grey-light mx-auto">
         <thead class="has-background-info">
@@ -20,7 +20,7 @@
         <tbody>
           {{#each dogs as |dog|}}
             <tr>
-              <td><button class="button is-info" type="submit">{{dog.name}}</button></td>
+              <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.name}}</td>
               <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.id}}</td>
               <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.owner.id}}</td>
               <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.dogwalker_id}}</td>

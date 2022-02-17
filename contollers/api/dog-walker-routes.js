@@ -4,7 +4,7 @@ const { dogs, owner, dogWalker } = require('../../models');
 // * GET ALL DOG WALKERS
 router.get('/', (req, res) => {
     dogWalker.findAll({
-        attributes: ['id', 'name']
+        attributes: ['id', 'name', 'description']
     })
     .then(dbDogWalkerData => res.json(dbDogWalkerData))
     .catch(err => {
