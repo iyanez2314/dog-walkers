@@ -37,20 +37,22 @@
               Dashboard
             </a>
             {{/if}}
-    
+            <a href="/team" class="navbar-item button is-link mx-4">
+              Meet The Team
+            </a>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
                 {{#if loggedIn}}
-                <a id="logout" class="button is-light">
+                <a id="logout" class="button is-light mx-4">
                   <strong>Logout</strong>
                 </a>
                 {{else}}
-                <a href="/login" class="button is-primary">
+                <a href="/login" class="button is-primary mx-4">
                   <strong>Login</strong>
                 </a>
-                <a href="/login" class="button is-warning">
+                <a href="/login" class="button is-warning mx-4">
                   <strong>Sign Up</strong>
                 </a>
                 {{/if}}
