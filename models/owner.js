@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const { dogWalker } = require('./dog-walker');
 const sequelize = require('../config/connection');
+const dogs = require('./dog');
 
 class owner extends Model {}
 
@@ -19,13 +20,14 @@ owner.init (
                 len: [1]
             }
         },
-        // dogwalker_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: dogWalker,
-        //         key: 'id'
-        //     }
-        // }
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true
+            }
+        }
     },
     {
         sequelize,

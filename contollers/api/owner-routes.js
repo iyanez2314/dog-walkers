@@ -4,7 +4,7 @@ const {dogs, owner} = require('../../models');
 // * Get all owners include their dogs
 router.get('/', (req, res) => {
     owner.findAll({
-        attributes: ['id', 'name'],
+        attributes: ['id', 'name', 'email'],
         include: [
             {
                 model: dogs,
@@ -46,7 +46,8 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     owner.create({
-        name: req.body.name
+        name: req.body.name,
+        email: req.body.email
     })
     .then(dbOwnerData => res.json(dbOwnerData))
     .catch(err => {
@@ -54,6 +55,8 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+
 
 router.delete('/:id', (req, res) => {
     owner.destroy({
