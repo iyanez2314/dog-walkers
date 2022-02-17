@@ -1,9 +1,9 @@
      {{#each this}}
       <div id="modal-js" class="modal">
         <div class="modal-background">
-            <figure class="image">
+            {{!<figure class="image">
                 <img src="/assets/dog-background.jpg" alt="Placeholder image">
-            </figure>
+            </figure>}}
         </div>
         <div class="modal-card">
             <header class="modal-card-head has-background-dark">
@@ -43,9 +43,9 @@
                 </form>
             </section>
             </section>
-            <footer class="modal-card-foot">
-            <button type="submit" class="button is-success">Submit Booking {{walker.name}}!</button>
-            <button class="button">Cancel</button>
+            <footer class="modal-card-foot has-background-dark">
+            <button type="submit" class="button is-success has-text-dark has-text-weight-medium">Submit Booking {{walker.name}}!</button>
+            <button class="button has-text-weight-medium">Cancel</button>
             </footer>
         </div>
         </div>
