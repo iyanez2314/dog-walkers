@@ -1,0 +1,37 @@
+
+{{#if loggedIn}}
+<div class="container is-fluid">
+<div class="mx-auto">
+  {{!<div class="columns is-mobile">
+    <div class="column is-half is-offset-one-quarter">}}
+      <section class="section"></section>
+        <div class="m-auto">
+          <h3 class="is-size-4 has-text-light m-auto">Please Select an available dog to walk</h3>
+        </div>
+      <table class="table is-bordered is-hoverable has-background-grey-light mx-auto">
+        <thead class="has-background-info">
+          <tr>
+            <th class="is-size-4">Dog Name</th>
+            <th class="is-size-4">Dog ID</th>
+            <th class="is-size-4">Owner ID</th>
+            <th class="is-size-4">Walker ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each dogs as |dog|}}
+            <tr>
+              <td><button class="button is-info" type="submit">{{dog.name}}</button></td>
+              <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.id}}</td>
+              <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.owner.id}}</td>
+              <td class="is-size-5 has-text-centered has-text-weight-medium">{{dog.dogwalker_id}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  {{!  </div>
+  </div>}}
+</div>
+</div>
+{{/if}}
+{{!-- <script src="/javascript/add-walker.js"></script> --}}
+

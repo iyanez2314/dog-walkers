@@ -5,7 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seeds": "node seeds/index.js",
+    "build-css": "tailwindcss build style.css -o public/stylesheets/style.css",
+    "scan-build-css": "npx tailwindcss -i ./tailwind.css -o ./public/stylesheets/style.css --watch",
+    "build-postcss": "postcss build public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "repository": {
     "type": "git",
@@ -19,14 +23,23 @@
   },
   "homepage": "https://github.com/iyanez2314/dog-walkers#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.2",
     "bcrypt": "^5.0.1",
+    "bulma": "^0.9.3",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "postcss": "^8.4.6",
     "sequelize": "^6.16.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^9.1.0",
+    "sequelize": "^6.16.0",
+    "tailwindcss": "^3.0.22"
   }
 }
