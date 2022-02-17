@@ -38,6 +38,10 @@ dogWalker.init(
             validate: {
                 len: [4]
             }
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     },
     {
