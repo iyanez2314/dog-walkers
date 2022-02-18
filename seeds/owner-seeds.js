@@ -5,39 +5,39 @@ const { owner } = require('../models');
 const ownerData = [
     {
         name: 'Robert',
-        email: 'Ro@mail.com'
+        email: 'Rob@mail.com'
     },
     {
         name: 'Alex',
-        email: 'ao@mail.com' 
+        email: 'alex@mail.com' 
     },
     {
         name: 'Joey',
-        email: 'do@mail.com'
+        email: 'doggo@mail.com'
     },
     {
         name: 'Alexis',
-        email: 'fRo@mail.com'
+        email: 'Alexis@mail.com'
     },
     {
         name: 'Vanessa',
-        email: 'go@mail.com'
+        email: 'pupwalker@mail.com'
     },
     {
         name: 'Tony',
-        email: 'wwo@mail.com'
+        email: 'tony@mail.com'
     },
     {
         name: 'Jessica',
-        email: 'wao@mail.com'
+        email: 'walk@mail.com'
     },
     {
         name: 'Carl',
-        email: 'fgg@mail.com'
+        email: 'pup@mail.com'
     },
     {
         name: 'Oscar',
-        email: 'gg@mail.com'
+        email: 'Os@mail.com'
     },
 ];
 
