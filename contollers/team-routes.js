@@ -20,4 +20,17 @@ const { dogWalker, dogs, owner } = require('../models');
  });
 
 
+ router.post('/', (req, res) => {
+    owner.create({
+        name: req.body.name,
+        email: req.body.email,
+        dog_name: req.body.dog_name
+    })
+    .then(dbOwnerData => res.json(dbOwnerData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
  module.exports = router;

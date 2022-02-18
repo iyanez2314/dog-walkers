@@ -17,5 +17,14 @@ router.get('/login', (req, res) => {
   });
 
 
+  router.get('/booking', (req, res) => {
+    if (req.session.ownerloggedIn) {
+      res.redirect('/booking');
+      return;
+    }
+ 
+    res.render('booking');
+  });
+
 module.exports = router;
 
