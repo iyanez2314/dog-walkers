@@ -1,8 +1,9 @@
 <section class="section"></section>
+<div class="team">
 <div class="level is-mobile">
-    <h3 class="is-size-2 has-text-light level-item has-text-centered">Meet Our Amazing Paw Walkers</h3>
+    <h3 class="is-size-1 has-text-grey-light level-item has-text-centered">Meet Our Amazing Team Of Paw Walkers</h3>
 </div>
-<div class="columns is-mobile is-multiline">
+<div class="columns is-mobile is-multiline m-auto">
       {{#each walker as |walker|}}
       <div class="column is-one-third">
         <div class="card has-background-dark has-text-light m-auto p-auto">
@@ -22,9 +23,10 @@
     <div class="content">
       {{walker.description}}
       <br>
-      <button class="js-modal-trigger button is-small is-success" data-target="modal-js">
+      {{!-- <button class="js-modal-trigger button is-small is-success" data-target="modal-js"> --}}
+      <a class="button is-success" href="/booking">
         Book Me!
-      </button>
+      </a>
       {{> modal walker }}  
     </div>
   </div>
@@ -32,6 +34,6 @@
       </div>
     {{/each}}
 </div>
+</div>
 
-
-<script src="/javascript/modal.js"></script>
+{{!-- <script src="/javascript/modal.js"></script> --}}
