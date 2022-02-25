@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { dogWalker, dogs, owner} = require ('../models');
-const withAuth = require('../utils/auth');
+const ownerwithAuth = require('../utils/auth');
 
 
 // * Dog walker will be able to see all the dogs with their associated owner
-router.get('/', withAuth, (req, res) => {
+router.get('/', ownerwithAuth, (req, res) => {
 owner.findAll({
     // where: {
     //     id: req.session.id

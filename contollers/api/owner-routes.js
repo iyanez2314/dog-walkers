@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
     })
     .then(dbOwnerData => {
         if(!dbOwnerData){
-            res.status(404).json({ message: 'No dog found with this id' });
+            res.status(404).json({ message: 'No owner found with this id' });
             return;
         }
         res.json(dbOwnerData);
@@ -81,7 +81,7 @@ router.post('/', (req, res) => {
     })
 });
 
-router.post('/booking', (req, res) => {
+router.post('/ownerlogin', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     owner.findOne({
       where: {
