@@ -31,29 +31,42 @@
             <a href="/" class="navbar-item button is-link mx-4">
               Home
             </a>
-            {{#if loggedIn}}
-            <hr class="navbar-divider">
-            <a href="/dashboard" class="navbar-item button is-info">
-              Dashboard
+            <a href="/booking" class="navbar-item button is-link mx-4">
+              Request a Paw Walker
             </a>
-            {{/if}}
+            
             <a href="/team" class="navbar-item button is-link mx-4">
               Meet The Team
             </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Become a Paw Walker
+              </a>
 
+              <div class="navbar-dropdown has-background-dark">
+                <a href="/login" class="navbar-item has-text-light">
+                  Login or Signup
+                </a>
+                <a class="navbar-item has-text-light">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item has-text-light">
+                  Report an issue
+                </a>
+            </div>
+      </div>
+          </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
                 {{#if loggedIn}}
-                <a id="logout" class="button is-light mx-4">
+                <hr class="navbar-divider">
+                <a href="/dashboard" class="button is-info">
+                  Dashboard
+                </a>
+                <a id="logout" class="button is-danger mx-4">
                   <strong>Logout</strong>
-                </a>
-                {{else}}
-                <a href="/login" class="button is-primary mx-4">
-                  <strong>Login</strong>
-                </a>
-                <a href="/login" class="button is-warning mx-4">
-                  <strong>Sign Up</strong>
                 </a>
                 {{/if}}
               </div>
