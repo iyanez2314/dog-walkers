@@ -81,7 +81,7 @@ router.post('/', (req, res) => {
     })
 });
 
-router.post('/booking', (req, res) => {
+router.post('/ownerlogin', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     owner.findOne({
       where: {

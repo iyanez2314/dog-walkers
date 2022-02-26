@@ -5,7 +5,7 @@ async function ownerloginFormHandler(event) {
     const password = document.querySelector('#owner-password-login').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/owner/booking', {
+      const response = await fetch('/api/owner/ownerlogin', {
         method: 'post',
         body: JSON.stringify({
           email,
@@ -17,6 +17,7 @@ async function ownerloginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/booking/');
       } else {
+        console.log('FAIL ON FETCH');
         alert(response.statusText);
       }
     }

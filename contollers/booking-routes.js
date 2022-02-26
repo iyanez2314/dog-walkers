@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { dogWalker, dogs, owner} = require ('../models');
-const ownerwithAuth = require('../utils/auth');
+const ownerwithAuth = require('../utils/ownerauth');
 
 
 // * Dog walker will be able to see all the dogs with their associated owner
