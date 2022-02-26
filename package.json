@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seeds": "node seeds/index.js",
-    "build-css": "tailwindcss build style.css -o public/stylesheets/style.css",
+    "build-css": "node-sass --omit-source-map-url sass/mystyles.scss public/stylesheets/mystyles.css",
     "scan-build-css": "npx tailwindcss -i ./tailwind.css -o ./public/stylesheets/style.css --watch",
     "build-postcss": "postcss build public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
@@ -34,6 +34,7 @@
     "handlebars": "^4.7.7",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "node-sass": "^7.0.1",
     "postcss": "^8.4.6",
     "sequelize": "^6.16.0"
   },
