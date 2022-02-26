@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("/assets/dog-background.jpg"); /* The image used */
+  background-image: url("/assets/dogwalk.jpg"); /* The image used */
   /*  background-color: #cccccc; /* Used if the image is unavailable */
   /*  height: 500px; /* You must set a specified height */
   /*  background-position: center; /* Center the image */
@@ -17,7 +17,7 @@
 }
 
 #login {
-  background-image: url("/assets/dog-background.jpg"); /* The image used */
+  background-image: url("/assets/logindog.jpg"); /* The image used */
   /*  background-color: #cccccc; /* Used if the image is unavailable */
   /* height: 500px; /* You must set a specified height */
   /* width: 500px; /* You must set a specified height */
@@ -28,7 +28,7 @@
 }
 
 #signup {
-  background-image: url("/assets/dog-background.jpg"); /* The image used */
+  background-image: url("/assets/girlwithdog.jpg"); /* The image used */
   /*  background-color: #cccccc; /* Used if the image is unavailable */
   /* height: 500px; /* You must set a specified height */
   /* width: 500px; /* You must set a specified height */
