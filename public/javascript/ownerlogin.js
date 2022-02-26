@@ -5,7 +5,7 @@ async function ownerloginFormHandler(event) {
     const password = document.querySelector('#owner-password-login').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/owner/ownerlogin', {
+      const response = await fetch('/api/owner/booking', {
         method: 'post',
         body: JSON.stringify({
           email,

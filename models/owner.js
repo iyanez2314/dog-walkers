@@ -1,12 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
-const { dogWalker } = require('./dog-walker');
 const sequelize = require('../config/connection');
-const dogs = require('./dog');
 const bcrypt = require('bcrypt');
 
 class owner extends Model {
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
+    checkPassword(ownerloginPw) {
+        return bcrypt.compareSync(ownerloginPw, this.password);
     }
 }
 
