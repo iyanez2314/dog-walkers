@@ -2,7 +2,7 @@
 const dogWalker = require('./dog-walker');
 const dogs = require('./dog');
 const owner = require('./owner');
-
+const applicant = require('./applicant')
 // * All the relations will go here 
 
 owner.hasMany(dogs, {
@@ -27,4 +27,4 @@ dogs.belongsTo(dogWalker, {
 
 
 
-module.exports = {dogs , owner, dogWalker};
+module.exports = {dogs , owner, dogWalker, applicant};

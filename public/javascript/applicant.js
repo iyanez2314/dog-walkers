@@ -5,7 +5,7 @@ async function applicantFormHandler(event) {
     const email = document.querySelector('#apply-email').value.trim();
     const phone = document.querySelector('#phone').value.trim();
   
-    if (name) {
+    if (name && email && phone) {
       const response = await fetch('/api/applicant', {
         method: 'post',
         body: JSON.stringify({
@@ -25,4 +25,4 @@ async function applicantFormHandler(event) {
   }
   
   
-document.querySelector('.applicant-form').addEventListener('submit', bookingFormHandler);
+document.querySelector('.applicant-form').addEventListener('submit', applicantFormHandler);
